@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Seats</title>
+    <link rel="stylesheet" href="seat-selection.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Bus Logo" class="logo">
+        <h1>Select Your Seats</h1>
+    </header>
+    <main>
+        <div class="bus-layout">
+            <!-- Seat layout will be dynamically inserted here -->
+            <div class="row">
+                <div class="seat available" data-seat="1">1</div>
+                <div class="seat available" data-seat="2">2</div>
+            </div>
+            <div class="row">
+                <div class="seat available" data-seat="3">3</div>
+                <div class="seat available" data-seat="4">4</div>
+            </div>
+            <!-- Repeat for other seats -->
+        </div>
+        <div class="summary">
+            <h2>Selected Seats</h2>
+            <p id="selected-seats">None</p>
+            <p>Total Cost: <span id="total-cost">$0</span></p>
+            <button id="next-button">Next</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bus Ticket Booking System</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

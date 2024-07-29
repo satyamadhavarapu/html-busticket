@@ -1,0 +1,37 @@
+/* Add these styles to your existing styles.css file */
+.bus-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: #ccc;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.available {
+    background-color: #76b852;
+}
+
+.selected {
+    background-color: #ff6f61;
+}
+
+.seat:not(.available) {
+    background-color: #333;
+    cursor: not-allowed;
+}

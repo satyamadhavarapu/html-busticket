@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savvari</title>
+    <link rel="shortcut icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/pic1.png" alt="Bus Logo" class="logo">
+        <h1>Bus Ticket Booking System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Login Form -->
+    <section id="login-section">
+        <h2>Login</h2>
+        <form id="login-form" action="dashboard.html" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <main id="home">
+        <div class="home-content">
+            <div class="description">
+                <h2>Welcome to Savvari Online Ticket Booking</h2>
+                <p>Online bus ticket booking systems have revolutionized the way passengers plan their travel. These platforms provide a convenient and efficient method to book bus tickets from the comfort of one's home or on the go, eliminating the need to visit physical ticket counters. Users can browse various bus operators, compare schedules, choose from different types of buses (such as AC, non-AC, seater, and sleeper), and select preferred seats, all within a few clicks.
+
+                    The integration of secure payment gateways ensures that transactions are safe and swift, enhancing the user experience. Additionally, these systems often offer features like booking history, cancellations, refunds, and real-time bus tracking, further improving the traveler's convenience..</p>
+            </div>
+            <div class="image">
+                <img src="images/bus3.jpg" alt="Bus Image" width="500" height="500">
+            </div>
+        </div>
+    </br>
+        
+    </br>
+</br>
+
+        <!-- Existing Forms and Content -->
+        <form id="bus-selection-form" action="javascript:void(0);" method="GET">
+            <label for="origin">From:</label>
+            <select id="origin" name="origin">
+                <option value="city1">City 1</option>
+                <option value="city2">City 2</option>
+                <!-- Add more cities as needed -->
+            </select>
+            <label for="destination">To:</label>
+            <select id="destination" name="destination">
+                <option value="city1">City 1</option>
+                <option value="city2">City 2</option>
+                <!-- Add more cities as needed -->
+            </select>
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+            <fieldset>
+                <legend>Bus Type</legend>
+                <label><input type="radio" name="busType" value="ac" required> AC</label>
+                <label><input type="radio" name="busType" value="non-ac"> Non-AC</label>
+            </fieldset>
+            <fieldset>
+                <legend>Bus Category</legend>
+                <label><input type="radio" name="busCategory" value="seater" required> Seater</label>
+                <label><input type="radio" name="busCategory" value="sleeper"> Sleeper</label>
+            </fieldset>
+            <button type="button" id="search-button">Search</button>
+        </form>
+
+        <!-- Seat Selection Form -->
+        <form id="seat-selection-form" action="passenger-details.html" method="POST" style="display:none;">
+            <div class="bus-layout">
+                <div class="row">
+                    <div class="seat available" data-seat="1">1</div>
+                    <div class="seat available" data-seat="2">2</div>
+                </div>
+                <div class="row">
+                    <div class="seat available" data-seat="3">3</div>
+                    <div class="seat available" data-seat="4">4</div>
+                </div>
+                <!-- Repeat for other seats -->
+            </div>
+            <div class="summary">
+                <h2>Selected Seats</h2>
+                <p id="selected-seats">None</p>
+                <p>Total Cost: <span id="total-cost">$0</span></p>
+                <button type="submit" id="next-button">Next</button>
+            </div>
+        </form>
+        
+        
+    </main>
+    <footer>
+        <p >&copy; 2024 Bus Ticket Booking System</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
